@@ -98,7 +98,7 @@ def addToBloomFilter(bitArray, element, bitArraySize, k):
     Parameters:
         - bitArray (array.array): The bit array representing the Bloom filter.
         - element (str): The element to add to the Bloom filter.
-        - bitArraySize (int): The size of the bit array (hash space).
+        - bitArraySize (int): The size of the bit array.
         - k (int): The number of hash functions to apply.
     """
     for i in range(k):
@@ -153,7 +153,7 @@ if len(sys.argv) > 1:
     
     emails = readEmailsFromFile(filename1)
     
-    m, k = BloomFilterCalculator(len(emails), 0.0000001)  # calculates the number of bits that will be in the filter and the number of hash function to be used
+    m, k = BloomFilterCalculator(len(emails), 0.0000001)  # calculates the number of bits that will be in the filter and the number of hash functions to be used
 
     bloomArray  = makeBitArray(m) # creates an m-bit array
 
